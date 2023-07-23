@@ -1,0 +1,148 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(55, 34, 29);
+  overflow: hidden;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background: url("../asset/cocktailbg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+
+.door, .animate, .door--right, .animate--right, .door--left, .animate--left {
+  height: 100%;
+  display: flex;
+  z-index: 10;
+  transition: 0.7s ease;
+}
+.door--left, .animate--left {
+  width: 50%;
+  background: url("../asset/left-door.jpg") no-repeat center;
+  background-size: cover;
+}
+.door--right, .animate--right {
+  width: 50%;
+  background: url("../asset/right-door.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.animate--left {
+  transform: translateX(-100%);
+}
+.animate--left-close {
+  transform: translateX(100%);
+}
+.animate--right {
+  transform: translateX(100%);
+}
+.animate--right-close {
+  transform: translateX(-100%);
+}
+
+.message, .message--show {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 0.3125rem;
+}
+.message--show {
+  position: absolute;
+  top: 10.25rem;
+  left: 11.25rem;
+  animation: fadeIn 1s;
+}
+.message--hide {
+  display: hidden;
+}
+.message__p {
+  font-weight: 600;
+  font-size: 2rem;
+  width: 33rem;
+  line-height: -1.5rem;
+}
+
+.bottom {
+  position: absolute;
+  background-color: #fff;
+  height: 15rem;
+  width: 33%;
+  bottom: 20px;
+  left: 37%;
+  animation: fadeIn 1.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bottom--hide {
+  display: none;
+}
+.bottom__input-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  font-weight: 600;
+  color: #683729;
+}
+.bottom__input-div {
+  margin-block: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  height: 2rem;
+  width: 12rem;
+  padding: 0.3125rem;
+  outline: #683729;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.options {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+.options__first, .options__second {
+  padding: 20% 2rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.options__first:hover, .options__second:hover {
+  color: #fff;
+  background-color: #683729;
+}
+.options__p {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+button {
+  background-color: #683729;
+  color: #fff;
+  font-size: 1.2rem;
+  border: 1px solid #fff;
+  padding: 0.5rem 2rem;
+}
+
+.drink-served {
+  max-width: 80%;
+  height: 10rem;
+}/*# sourceMappingURL=styles.css.map */
